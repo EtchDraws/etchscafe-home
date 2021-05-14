@@ -123,6 +123,8 @@ html {
  </head>
 <body class="w3-black">
 
+    <label id="lblGreetings"></label>
+
 <!-- Links (sit on top) -->
 
 
@@ -131,7 +133,22 @@ html {
   <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
     <span class="w3-tag">Commission availability:</span>
   </div>
- 
+ <script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b> and welcome to my personal website!';
+</script> 
   <div class="w3-display-middle w3-center">
      <span class="w3-text-yellow w3-animate-opacity" style="font-size:120px">Etch's<br>Cafe</span>
   
