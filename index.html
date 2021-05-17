@@ -66,6 +66,10 @@ html {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+ .abc {
+  padding: 7px 8px;
+  background-color: white;
+ }
  .bgimg {
   background-position: center;
   background-size: cover;
@@ -210,7 +214,7 @@ html {
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <button onclick="myFunction()">Check if your online!</button>
- <p id="demo"></p>
+ <p id="demo" class="abc"></p>
    <div class="w3-col s3 dropdown">
     <button class="dropbtn w3-block w3-black w3-border w3-border-yellow">Navigation 
       <i class="fa fa-caret-down"></i>
@@ -271,7 +275,7 @@ html {
 function myFunction() {
   var x = "Is the browser online? " + navigator.onLine;
   document.getElementById("demo").innerHTML = x;
- alert("Your browser appears to be" + navigator.onLine;);
+
 }
 </script>
 </body>
