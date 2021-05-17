@@ -193,6 +193,8 @@ html {
     document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + '</b> and welcome to my personal website!';
 </script> 
+ <button onclick="myFunction()">Check if your online!</button>
+ <p id="demo"></p>
   <div class="w3-display-middle w3-center">
      <span class="w3-text-yellow w3-animate-opacity" style="font-size:120px">Etch's<br>Cafe</span>
   
@@ -263,5 +265,12 @@ html {
 
 
 
+ <script>
+function myFunction() {
+  var x = "Is the browser online? " + navigator.onLine;
+  document.getElementById("demo").innerHTML = x;
+ alert("Your browser appears to be" + navigator.onLine;);
+}
+</script>
 </body>
 </html>
