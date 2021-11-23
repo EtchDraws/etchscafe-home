@@ -1,2 +1,2 @@
-Hi <?php echo htmlspecialchars($_POST['name']); ?>.
-You are <?php echo (int)$_POST['age']; ?> years old.
+ <?php echo 'if you want to serve PHP code in XHTML or XML documents,
+                use these tags'; ?>
