@@ -380,7 +380,16 @@ html {
 
 <!-- Header with image -->
    
- <script>
+ <style>
+  .bgimg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+</style>
+
+<script>
   function randomImage() {
     var images = [
       'https://images.unsplash.com/photo-1666457384021-fa422f678796?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80',
@@ -400,8 +409,12 @@ html {
     var currentIndex = 0;
 
     function changeImage() {
-      element[0].style["background-image"] = "url(" + images[currentIndex] + ")";
-      currentIndex = (currentIndex + 1) % size;
+      element[0].style.opacity = 0;
+      setTimeout(function () {
+        element[0].style["background-image"] = "url(" + images[currentIndex] + ")";
+        element[0].style.opacity = 1;
+        currentIndex = (currentIndex + 1) % size;
+      }, 500); // Delay the image change to match the transition duration
     }
 
     changeImage(); // Initial image
@@ -411,6 +424,7 @@ html {
 
   document.addEventListener("DOMContentLoaded", randomImage);
 </script>
+
 
  
  
