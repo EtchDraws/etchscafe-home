@@ -380,39 +380,38 @@ html {
 
 <!-- Header with image -->
    
- <script>function randomImage(){
-  var images = [
-   <!-- sillouette of mountains -->
-   'https://images.unsplash.com/photo-1666457384021-fa422f678796?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80',
-   <!-- black shape (of a home) that lines up well -->
-   'https://images.unsplash.com/photo-1608302097952-4eb1e19ba0dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1038&q=80',
-   <!-- side shot of light apartment buildings with flowers -->
-   'https://images.unsplash.com/photo-1571956182603-7d93c6baa953?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-   <!-- neo tokyo -->
-   'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80',
-   <!-- DOG -->
-   'https://images.unsplash.com/photo-1636998094276-f2e8f673c41c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80',
-   <!-- slot canyon shot -->
-   'https://images.unsplash.com/photo-1636097325418-b7dbb56bbb5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80',
-   <!-- side shot of red apartment buildings -->
-   'https://images.unsplash.com/photo-1568294004522-38839172d69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-   <!-- burning shot of mountains with sunset -->
-   'https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-   <!-- blue shot of mountain sillouette -->
-   'https://images.unsplash.com/photo-1542227844-a3958171a7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-   <!-- freezing cold mountain lake super reflective -->
-   'https://images.unsplash.com/photo-1455156218388-5e61b526818b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-   <!-- 3d render of some shapes -->
-   'https://images.unsplash.com/photo-1667026950732-fae2c3d2c776?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80'];
-  var size = images.length;
-  var x = Math.floor(size * Math.random());
-  console.log(x);
-  var element = document.getElementsByClassName('bgimg');
-  console.log(element);
-  element[0].style["background-image"] = "url("+ images[x] + ")";
-}
+ <script>
+  function randomImage() {
+    var images = [
+      'https://images.unsplash.com/photo-1666457384021-fa422f678796?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80',
+      'https://images.unsplash.com/photo-1608302097952-4eb1e19ba0dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1038&q=80',
+      'https://images.unsplash.com/photo-1571956182603-7d93c6baa953?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80',
+      'https://images.unsplash.com/photo-1636998094276-f2e8f673c41c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80',
+      'https://images.unsplash.com/photo-1636097325418-b7dbb56bbb5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80',
+      'https://images.unsplash.com/photo-1568294004522-38839172d69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      'https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      'https://images.unsplash.com/photo-1542227844-a3958171a7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      'https://images.unsplash.com/photo-1455156218388-5e61b526818b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1667026950732-fae2c3d2c776?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80'
+    ];
+    var size = images.length;
+    var element = document.getElementsByClassName('bgimg');
+    var currentIndex = 0;
 
-document.addEventListener("DOMContentLoaded", randomImage); </script>
+    function changeImage() {
+      element[0].style["background-image"] = "url(" + images[currentIndex] + ")";
+      currentIndex = (currentIndex + 1) % size;
+    }
+
+    changeImage(); // Initial image
+
+    setInterval(changeImage, 6000); // Change image every 6 seconds
+  }
+
+  document.addEventListener("DOMContentLoaded", randomImage);
+</script>
+
  
  
 <header class="bgimg w3-display-container " id="home">
