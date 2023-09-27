@@ -354,10 +354,9 @@ html {
 
 
 .inverted-text {
-    font-size: 24px;
-    color: white; /* Change this to your desired text color */
-    mix-blend-mode: difference;
-}
+            font-size: 24px;
+            color: white; /* Change this to your desired initial text color */
+        }
  
 
  div.a {
@@ -492,17 +491,31 @@ function myFunction2() {
 </script> 
 
  
-  <div class="w3-display-middle w3-center">
-     <span class="w3-animate-opacity yeez inverted-text" style="font-size:12vw">TWCC</span>
   
-  </div>
  
    
   
 </header>
- 
+ <div class="w3-display-middle w3-center">
+     <span class="w3-animate-opacity yeez inverted-text" id="invertedText" style="font-size:12vw">TWCC</span>
   
+  </div>
+  
+ <script>
+        const invertedText = document.getElementById("invertedText");
+        const background = document.querySelector("bgimg");
 
+        function updateInvertedText() {
+            const computedStyle = getComputedStyle(background);
+            const backgroundColor = computedStyle.backgroundColor;
+
+            invertedText.style.color = backgroundColor;
+        }
+
+        // Update the inverted text color initially and whenever the window is resized
+        window.addEventListener("DOMContentLoaded", updateInvertedText);
+        window.addEventListener("resize", updateInvertedText);
+    </script>
 
 
 <body>
