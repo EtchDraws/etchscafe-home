@@ -494,28 +494,14 @@ function myFunction2() {
   
  
    
-  
-</header>
- <div class="w3-display-middle w3-center">
-     <span class="w3-animate-opacity yeez inverted-text" id="invertedText" style="font-size:12vw">TWCC</span>
+  <div class="w3-display-middle w3-center">
+     <span class="w3-animate-opacity yeez" style="font-size:12vw">TWCC</span>
   
   </div>
+</header>
+ 
   
- <script>
-        const invertedText = document.getElementById("invertedText");
-        const background = document.querySelector("bgimg");
-
-        function updateInvertedText() {
-            const computedStyle = getComputedStyle(background);
-            const backgroundColor = computedStyle.backgroundColor;
-
-            invertedText.style.color = backgroundColor;
-        }
-
-        // Update the inverted text color initially and whenever the window is resized
-        window.addEventListener("DOMContentLoaded", updateInvertedText);
-        window.addEventListener("resize", updateInvertedText);
-    </script>
+ 
 
 
 <body>
