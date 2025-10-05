@@ -7,113 +7,135 @@
 <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-youtube-outline-512.png">
 
 <!-- Fonts & Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Audiowide|Zilla+Slab|Trirong">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Zilla+Slab|Trirong">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Bootstrap & W3.CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- W3.CSS -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
 
 <style>
-/* Reset & Global Styles */
+/* Global */
 * {box-sizing: border-box; margin: 0; padding: 0;}
 body {font-family: 'Zilla Slab', serif; background-color: black; color: white; scroll-behavior: smooth;}
-a {text-decoration: none;}
-header, footer {background-color: black; color: white;}
-h1, h2, h3, h4 {margin: 0;}
+h1,h2,h3,h4 {margin: 0;}
+a {text-decoration: none; color: inherit;}
 .w3-tag {font-family: 'Trirong', serif;}
+section {padding: 80px 20px;}
 
-/* Top Navigation */
+/* Topnav */
 .w3-top {position: fixed; top: 0; width: 100%; z-index: 10;}
-.topnav a {color: white; padding: 14px 16px; display: block; text-align: center;}
-.topnav a:hover, .dropdown:hover .dropbtn {background-color: red;}
+.topnav {background-color: black; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;}
+.topnav a {color: white; padding: 10px 15px; transition: 0.3s;}
+.topnav a:hover {color: red;}
+.topnav .logo {font-family: 'Audiowide', sans-serif; font-size: 24px; text-shadow: 0 0 10px white;}
 
 /* Dropdown */
 .dropdown-content {display: none; position: absolute; background-color: black; min-width: 120px; z-index: 1;}
 .dropdown-content a {color: white; padding: 8px 12px; display: block;}
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Background image header */
-.bgimg {position: relative; min-height: 72vh; background-position: center; background-size: cover; transition: opacity 0.5s ease-in-out;}
-.bgimg span {text-shadow: 5px 5px 5px white; font-size: 90px; font-family: 'Audiowide', sans-serif;}
-
-/* Notification badge */
-.notification {background-color: #555; color: white; padding: 15px 26px; display: inline-block; border-radius: 2px; position: relative;}
-.notification .badge {position: absolute; top: -10px; right: -10px; padding: 5px 10px; border-radius: 50%; background-color: red; color: white;}
+/* Hero / Header */
+.bgimg {position: relative; min-height: 100vh; background-position: center; background-size: cover; display: flex; justify-content: center; align-items: center; transition: 0.5s;}
+.bg-box {background: rgba(255,255,255,0.85); padding: 40px 60px; border-radius: 20px; box-shadow: 0 0 30px white; text-align: center;}
+.bg-box span {font-family: 'Audiowide', sans-serif; font-size: 100px; color: black; text-shadow: 2px 2px 10px rgba(0,0,0,0.5), 0 0 30px white; display: block; animation: glow 2s infinite alternate;}
+@keyframes glow {0% {text-shadow: 2px 2px 10px rgba(0,0,0,0.5),0 0 20px white;} 100% {text-shadow: 2px 2px 15px rgba(0,0,0,0.7),0 0 50px white;}}
 
 /* Animated bars */
-@keyframes mymove {50% {left: 100vw;}}
-.animated-bar {position: absolute; left: 0; width: 1vw; height: 2vw; background-color: blue; opacity: 0.5; animation: mymove 1.5s infinite;}
+.animated-bar {position: absolute; left: 0; width: 1vw; height: 3vw; background-color: blue; opacity: 0.5; animation: movebar 1.5s infinite;}
 .animated-bar:nth-child(2) {animation-delay: 0.3s;}
 .animated-bar:nth-child(3) {animation-delay: 0.6s;}
 .animated-bar:nth-child(4) {animation-delay: 0.9s;}
 .animated-bar:nth-child(5) {animation-delay: 1.2s;}
 .animated-bar:nth-child(6) {animation-delay: 1.5s;}
 .animated-bar:nth-child(7) {animation-delay: 1.8s;}
+@keyframes movebar {50% {left: 100vw;}}
 
-/* Responsive */
-@media screen and (max-width: 800px){.main {width: 80%; padding:0;} .right {width: 100%;}}
-@media screen and (max-width: 500px){.menu, .main, .right, .topnav a, .topnav input[type=text], .topnav .search-container button {width: 100%; display: block; text-align: left;}}
+/* Sections */
+section {opacity: 0; transform: translateY(50px); transition: all 1s ease;}
+section.visible {opacity: 1; transform: translateY(0);}
+.section-light {background: rgba(255,255,255,0.05);}
+
+/* Footer */
+footer {text-align: center; padding: 40px 20px; background-color: black; color: white; font-size: 16px;}
 </style>
-
 </head>
 <body>
 
 <!-- Top Navigation -->
 <div class="w3-top topnav">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s1 w3-dropdown-hover">
-      <button class="w3-button w3-black">Navigation <i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-border">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+  <div class="logo">VELOCITY MODS</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
 
-<!-- Header / Hero Image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-middle w3-center">
-    <span class="yeez">VELOCITYMODS</span>
+<!-- Hero Section -->
+<header class="bgimg" id="home">
+  <div class="bg-box">
+    <span>VELOCITYMODS</span>
+    <p style="margin-top:20px; font-size:24px; color:#333;">TUNING | CUSTOMS | MOD INSTALLATION</p>
   </div>
-  <div class="w3-display-bottomright w3-padding-large w3-hide-small">
-    <span class="w3-tag" style="font-size:15px">TUNING <br> CUSTOMS <br> MOD INSTALLATION</span>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large w3-hide-small" id="lblGreetings"></div>
+
+  <!-- Animated bars -->
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
+  <div class="animated-bar"></div>
 </header>
 
-<!-- Animated Bars -->
-<div id="bars">
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-  <div class="animated-bar"></div>
-</div>
+<!-- About Section -->
+<section id="about" class="section-light">
+  <h2>About Velocity Mods</h2>
+  <p>We are your ultimate destination for performance tuning, custom mods, and installation services. Our passion is cars, and we make every vehicle unique.</p>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Engine Tuning & Performance Upgrades</li>
+    <li>Custom Modifications & Body Kits</li>
+    <li>Audio & Visual Installations</li>
+    <li>Full Vehicle Customization Packages</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-light">
+  <h2>Contact Us</h2>
+  <p>Email: info@velocitymods.com</p>
+  <p>Phone: (555) 123-4567</p>
+</section>
 
 <!-- Footer -->
-<footer class="w3-center w3-padding-48 w3-large">
-  &copy; 2025 VELOCITY MODS
+<footer>
+  &copy; 2025 VELOCITY MODS | All Rights Reserved
 </footer>
 
 <!-- Scripts -->
 <script>
-  // Greeting based on time
-  var myDate = new Date();
-  var hrs = myDate.getHours();
-  var greet = (hrs < 12) ? '*yawn* Good morning!' : (hrs <= 17) ? 'Hey! Good afternoon!' : '*happy sigh* Good evening';
-  document.getElementById('lblGreetings').innerHTML = '<h3>' + greet + '</h3> and welcome to our website!';
+  // Scroll reveal
+  function revealSections() {
+    var sections = document.querySelectorAll('section');
+    var windowBottom = window.innerHeight + window.scrollY;
+    sections.forEach(section => {
+      if(windowBottom > section.offsetTop + 100) {
+        section.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('load', revealSections);
 
-  // Dark mode toggle
-  function toggleDarkMode() { document.body.classList.toggle("dark-mode"); }
-
-  // Random background images
-  function randomImage() {
+  // Random background images for hero
+  function randomHero() {
     var images = [
       'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2370',
       'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2370',
@@ -132,7 +154,7 @@ h1, h2, h3, h4 {margin: 0;}
     change();
     setInterval(change, 6000);
   }
-  document.addEventListener("DOMContentLoaded", randomImage);
+  document.addEventListener("DOMContentLoaded", randomHero);
 </script>
 
 </body>
